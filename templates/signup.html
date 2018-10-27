@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>GIMMIE YER DEETS PLS</h1>
+
+<form method="POST">
+    <table>
+
+        <tr>
+            <td><label for="user">Username:</label></td>
+            <td>
+            <input type="text" name="user" id="user" value="{{uv}}">
+            <span class="error">{{user_error}}</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><label for="pass">Password:</label></td>
+            <td>
+            <input type="password" name="pass" id="pass">
+            <span class="error">{{p1_error}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="pass2">Verify Password:</label></td>
+            <td>
+            <input type="password" name="pass2" id="pass2">
+            <span class="error">{{p2_error}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="email">Email (Optional):</label></td>
+            <td>
+            <input type="text" name="email" id="email" value="{{ev}}">
+            <span class="error">{{email_error}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+{% endblock %}
